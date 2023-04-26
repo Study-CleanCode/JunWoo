@@ -12,6 +12,18 @@ import com.android.hara.presentation.util.HARAobjcet.categoryList
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
+/*
+        binding.clCategorySelectLayout.setOnSingleClickListener {
+            PickerBottomSheetDialog() { categoryViewModel.setCategory(it) }.show(
+                childFragmentManager,
+                "picker"
+            )
+        }
+        호출부 부분 
+        addListener는 해당 호출부에서 고차함수 형태로 넘겨집니다.
+*/
+
+
 @AndroidEntryPoint
 class PickerBottomSheetDialog(private val addListener: (Int) -> Unit) :
     BindingNotDraggableBottomSheet<FragmentBottomsheetPickerBinding>(R.layout.fragment_bottomsheet_picker) {
