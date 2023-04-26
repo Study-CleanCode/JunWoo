@@ -28,6 +28,10 @@ import timber.log.Timber
 class PickerBottomSheetDialog(private val addListener: (Int) -> Unit) :
     BindingNotDraggableBottomSheet<FragmentBottomsheetPickerBinding>(R.layout.fragment_bottomsheet_picker) {
 
+    companion object{    
+        val categoryList = listOf<String>("일상", "연애", "패션/뷰티", "커리어", "운동", "여행", "기타")
+    }
+            
     private var count = 1
 
     @SuppressLint("ResourceAsColor")
