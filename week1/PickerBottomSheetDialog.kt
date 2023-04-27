@@ -49,6 +49,7 @@ class PickerBottomSheetDialog(private val categoryPickerSelectedListener: (Int) 
             this.setOnValueChangedListener { _, _, nweCategoryId ->
                 categoryId = nweCategoryId + 1
             }
+            //Picker의 항목이 바뀔때마다 categoryId변수의 값을 바꾸어줍니다.
         }
     }
 
@@ -59,6 +60,7 @@ class PickerBottomSheetDialog(private val categoryPickerSelectedListener: (Int) 
             }
             btnComplete.setOnClickListener {
                 categoryPickerSelectedListener(categoryId)
+                //완료 버튼을 누르면 뷰모델의 categoryId저장 변수의 값을 바꾸어줍니다.
                 dismiss()
             }
         }
