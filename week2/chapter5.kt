@@ -11,8 +11,6 @@ fun my_function
 private val sercretpeopleList = mutableListOf<Int>()
 val peopleList :List<Int>  get() = sercretpeopleList
 
-fun myFunction
-
 interface function
 class realFunction : function
 
